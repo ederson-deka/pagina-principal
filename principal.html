@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leia uma página Por Dia</title>
+
+   
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            background-color: #a66d2b04 ;
+        }
+
+        header{
+            margin: 0px;
+            padding: 20px;
+            background-color: #57C4F2;
+            font-family: 'Caveat Brush', cursive;
+            font-size: 40px;
+            color: #593205;
+            text-align: center;
+        }
+
+        header > p{
+          color:  white;
+        }
+
+        .menu{
+            width: 100%;
+            height: 50px;
+        }
+
+        .menu ul{
+            list-style: none;
+            position: relative;
+        }
+
+        .menu ul li{
+            width: 150px;
+            float: left;
+        }
+
+        .menu a {
+            padding: 15px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            color: #593205;
+           background-color: #57c4f21c;
+        }
+        .menu ul ul{
+            position: relative;
+            visibility: hidden;
+        }
+
+        .menu ul li:hover ul{
+            visibility: visible;
+        }
+
+        .menu a:hover{
+            background-color: #0E4359 ;
+            color: whitesmoke;
+        }
+
+        .menu ul ul li{
+            float: none;
+            border-bottom: solid 1px  #593205;;
+        }
+
+        label[for="bt_menu"]{
+            padding: 5px;
+            background-color:#0E4359 ;
+            color: white;
+            font-family:'Caveat Brush', cursive;
+            text-align: center;
+            font-size: 30px;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+        }
+
+        #bt_menu{
+            display: none;
+        }
+
+        label[for="bt_menu"]{
+            display: none;
+        }
+        @media(max-width: 800px){
+            label[for="bt_menu"]{
+            display: block;
+            }
+
+            #bt_menu:checked ~ .menu{
+                margin-left: 0;
+            }
+
+            .menu{
+                margin-top: 5px;
+                margin-left: -100%;
+                transition: all .4s;
+            }
+            .menu ul li{
+                width: 100%;
+                float: none;
+            }
+            .menu ul ul{
+                position: static;
+                overflow: hidden;
+                max-height: 0;
+                transition: all .4s;
+            }
+
+            .menu ul li:hover ul{
+                height: auto;
+                max-height: 300px;
+            }
+        }
+        main{
+            min-width: 300px;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        main h1{
+            color: black;
+            font-family: 'Lato', sans-serif;
+            font-weight: normal;
+            font-size: 3em;
+        }
+        main h2{
+            color: black;
+            font-family: 'Lato', sans-serif;
+            font-weight: bolder;
+            font-size: 1.8em;
+            padding: 20px;
+        }
+        main p {
+            margin: 15px 0px;
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            text-align: justify;
+            color: black;
+            line-height: 1.5em;
+        }
+        main strong{
+            background-color: #57c4f24d;
+        }
+        footer p{
+            background-color:#57C4F2;
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            text-align: center;
+            color: black;
+            padding: 20px;
+        }
+
+
+
+
+    </style>
+    
+</head>
+<body>
+    
+    <header>
+        <h1>Leia uma página Por Dia</h1>
+        <p>Home</p>
+    </header>
+
+    <input type="checkbox" id="bt_menu">
+    <label for="bt_menu">&#9776;</label>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="principal.html">Home</a></li>
+            <li><a href="quemsomos.html">Quem Somos</a></li>
+            <li><a href="artigos.html">Artigos</a>
+                <ul>
+                    <li><a href="artigos.html">Reprogramação Lógica </a></li>
+                </ul>
+            
+            </li>
+            
+            <li><a href="videos.html">Vídeos</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>
+            Nossa Casa
+        
+        </h1>
+        
+        <h2>Olá! Boas-vindas a iniciativa Leia uma página por dia. </h2>
+
+        <p>Neste espaço divulgamos conteúdo exclusivo sobre como aprender mais por meio da leitura. Para conhecer o nosso trabalho, podemos navegar nas páginas: <strong>Quem Somos, Artigos e Vídeos</strong>.</p>
+
+        <p>Na página <strong><a href="quemsomos.html">Quem Somos</a></strong>, falamos um pouco sobre o nosso trabalho e linha de atuação. No espaço <strong><a href="artigos.html">Artigos</a></strong>, divulgamos textos de autoria própria e também de convidados.</p>
+    
+        <p>Já na página <strong><a href="videos.html">Vídeos</a></strong>, divulgamos temas que discutem leitura e escrita para aprimorar o conhecimento e aprendizado, tanto para área acadêmica quanto profissional.</p>
+
+    </main>
+
+    <footer>
+        <p>Site desenvolvido por Ederson Déka</p>
+   
+    </footer>
+    
+</body>
+</html>
